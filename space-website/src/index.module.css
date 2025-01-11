@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Heebo', sans-serif;
+}
+
+.main {
+  margin: auto;
+  width: 100%;
+
+  & .menu {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+  }
+
+  & .navbar {
+    display: flex;
+    gap: 40px;
+
+    & .a_pag {
+      color: #000;
+      text-decoration: none;
+      padding: 24px 8px;
+    }
+
+    & .a_pag:hover {
+      border-bottom: solid 2px;
+    }
+  }
+
+  & .card {
+    width: 44%;
+    margin: auto;
+    text-align: left;
+    padding: 8px;
+
+    & .title {
+      font-weight: 300;
+    }
+
+    & .title_primary {
+      font-size: 128px;
+      font-weight: 300;
+    }
+
+    & .description {
+      text-align: justify;
+      font-weight: 400;
+    }
+  }
+}
