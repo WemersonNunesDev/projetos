@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #141414;
+  --secondary-color: #1E1E1E;
+  --terciaria-color: #80B6DD;
+  --details-color: #A6524A;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bar_menu {
+  margin: auto;
+  margin-top: 2rem;
+  padding: 8px 16px;
+  width: 740px;
+  height: 40px;
+  border-radius: 1rem;
+  border: 2px solid #141414;
+  /* background-color: #969696; */
+}
+
+.bar_menu nav {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.bar_menu nav > a {
+  color: #141414;
+  font-weight: 500;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.bar_menu nav > a:hover {
+  color: var(--terciaria-color);
+  font-weight: 500;
+  transform: scale(0.9);
+  transition: 0.3s;
+}
+
+.container_main {
+  margin: auto;
+  margin-top: 10rem;
+  width: 46.25rem;
+  padding: 1rem;
+}
+
+.about {
+  margin: auto;
+  display: flex;
+  gap: 32px;
+  color: #141414;
+}
+
+.about {
+  & .card_box {
+    width: 48%;
+    height: 25rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+  }
+
+  & .info_box {
+    text-align: justify;
+    color: #141414;
+    width: 52%;
+    height: 25rem;
+  }
+
+  & .info_box h1, p {
+    padding-bottom: 8px;
+  }
+}
+
+.me_box {
+  margin-bottom: 5rem;
+}
+
+.me_box > .about {
+  & .info_box > .title {
+    font-size: 5rem;
+    font-weight: normal;
+  }
+
+  & .info_box .text1 {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  & .info_box .text2 {
+    font-size: 1.75rem;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+  }
+}
+
+.me_box .about > .card_box {
+  background: url('../src/img/Claudia_e_Wemerson-7.jpg') center 31% / auto no-repeat;
+  filter: grayscale(100%);
+  /* box-shadow: 0 4px 14px 5px #1e1e1e79; */
+}
+
+.projetos_sec {
+  width: 100%;
+}
+
+.proj_box > .about {
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  
+  & .info_box > .title {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: normal;
+  }
+}
