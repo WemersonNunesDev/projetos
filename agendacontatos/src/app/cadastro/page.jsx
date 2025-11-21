@@ -13,6 +13,8 @@ export default function Home() {
     const [msg, setMsg] = useState(null);
     const [status, setStatus] = useState(null);
 
+    const handleVoltar = () => setMsg(null);
+
     async function handleSubmit(e) {
         e.preventDefault();
 
@@ -47,68 +49,56 @@ export default function Home() {
                 />
 
                 {msg ? (
-                    <div>
-                        <Msgbox text={msg} styleMsg={status}/>
+                    <div className="">
+                        <Msgbox text={msg} styleMsg={status} className={'col-span-4'}/>
+                        <button
+                        onClick={handleVoltar}
+                            className="capitalize bg-gray-400 text-white font-medium px-2 py-1 rounded my-2 border-2 border-gray-400 hover:bg-transparent hover:text-gray-600 hover:border-gray-600 transition duration-300 ease-in-out"
+                        >
+                            voltar
+                        </button>
                     </div>
                 ) : (
-                    <form className="my-6" onSubmit={handleSubmit}>
-                    <div className="flex justify-around items-center border-b py-6">
-                        <label className="w-[24%]">Nome</label>
+                    <form className="my-6 flex flex-col gap-4" onSubmit={handleSubmit}>
+                    <div className="bg-gray-300 flex flex-col justify-center p-4 rounded  border-2 border-gray-700 focus-within:border-indigo-500">
+                        <label className="font-medium">Nome</label>
                         <input 
                             type="text"
                             value={nome}
                             onChange={e => setNome(e.target.value)}
-                            className="
-                            outline-none
-                            px-2 py-1 w-[64%]
-                            border border-gray-950 rounded
-                            focus:border-blue-500
-                            transition duration-300 ease-in-out
-                            "
+                            className="outline-none"
                         />
                     </div>
-                    <div className="flex justify-around items-center border-b py-6">
-                        <label className="w-[24%]">Sobrenome</label>
+                    <div className="bg-gray-300 flex flex-col justify-center p-4 rounded  border-2 border-gray-700 focus-within:border-indigo-500">
+                        <label className="font-medium">Sobrenome</label>
                         <input 
                             type="text"
                             value={sobrenome}
                             onChange={e => setSobrenome(e.target.value)}
                             className="
                             outline-none
-                            px-2 py-1 w-[64%]
-                            border border-gray-950 rounded
-                            focus:border-blue-500
-                            transition duration-300 ease-in-out
                             "
                         />
                     </div>
-                    <div className="flex justify-around items-center border-b py-6">
-                        <label className="w-[24%]">Telefone</label>
+                    <div className="bg-gray-300 flex flex-col justify-center p-4 rounded  border-2 border-gray-700 focus-within:border-indigo-500">
+                        <label className="font-medium">Telefone</label>
                         <input 
                             type="number"
                             value={telefone}
                             onChange={e => setTelefone(e.target.value)}
                             className="
                             outline-none
-                            px-2 py-1 w-[64%]
-                            border border-gray-950 rounded
-                            focus:border-blue-500
-                            transition duration-300 ease-in-out
                             "
                         />
                     </div>
-                    <div className="flex justify-around items-center border-b py-6">
-                        <label className="uppercase w-[24%]">email</label>
+                    <div className="bg-gray-300 flex flex-col justify-center p-4 rounded  border-2 border-gray-700 focus-within:border-indigo-500">
+                        <label className="uppercase font-medium">email</label>
                         <input 
                             type="email"
                             value={email}
                             onChange={e => setEmail(e.target.value)}
                             className="
                             outline-none
-                            px-2 py-1 w-[64%]
-                            border border-gray-950 rounded
-                            focus:border-blue-500
-                            transition duration-300 ease-in-out
                             "
                         />
                     </div>
@@ -118,7 +108,7 @@ export default function Home() {
                             className="
                             capitalize text-white font-medium
                             bg-blue-500 border-2 border-blue-500
-                            px-3 py-1 my-6 rounded w-28
+                            px-3 py-1 rounded w-28
                             hover:bg-transparent hover:text-blue-500
                             transition duration-300 ease-in-out
                             focus:bg-cyan-300 focus:text-cyan-50 focus:border-cyan-500

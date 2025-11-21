@@ -1,5 +1,6 @@
 import ItemTable from "@/components/ItemTable";
 import Msgbox from "@/components/Msgbox";
+import EditOption from "./EditOptions";
 
 export default async function FindItem() {
     const res = await fetch('http://localhost:3000/api/agenda', { cache: 'no-store' });
@@ -20,6 +21,7 @@ export default async function FindItem() {
                             secondName={item.sobrenome}
                             phone={item.telefone}
                             email={item.email}
+                            options={<EditOption id={item._id}/>}
                         />
                     ))
                 ) : (
