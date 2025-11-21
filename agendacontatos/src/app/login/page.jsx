@@ -33,8 +33,9 @@ export default function Login() {
             return
         };
         
-        setMsg('Usuário cadastrado!');
-        setStatus('succefull');
+        await signIn('credentials', {
+            email, senha, redirect: true, callbackUrl: '/'
+        })
     }
 
     async function handleLogin(e) {

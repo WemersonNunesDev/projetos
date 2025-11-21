@@ -3,7 +3,6 @@ import credentialsProvider from "next-auth/providers/credentials";
 import { connectDB } from "@/lib/mongodb";
 import User from "@/models/User";
 import bcrypt from 'bcryptjs';
-import { signIn } from "next-auth/react";
 
 export const authOptions = {
     session: { strategy: 'jwt', },

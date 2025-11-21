@@ -12,7 +12,7 @@ export default withAuth(
 // Rotas protegidas
 export const config = {
   matcher: [
-    "/((?!login|cadastro|api/auth|_next|favicon.ico).*)",
+    "/((?!login|api/auth|_next|favicon.ico).*)",
   ],
 };
 
