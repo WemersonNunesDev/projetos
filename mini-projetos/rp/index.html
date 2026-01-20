@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header id="cabecalho">
+        <h1>Bem vindo ao Contador</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="./view/dices.html">Dados</a></li>
+                <li><a href="#">Mais</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="corpo">
+        <section id="contador">
+            <h2>Contador simples</h2>
+            <p>Você pode aumentar, diminuir, reiniciar, salvar e carregar o valor contado usando os botões abaixo.</p>
+
+            <div id='controles'>
+                <h3>Controles</h3>
+                <div class="valor">0</div>
+                <button data-action="aumentar">+</button>
+                <button data-action="diminuir">-</button>
+                <button data-action="reiniciar">Reiniciar</button>
+                <button data-action="salvar">Salvar</button>
+                <button data-action="carregar">Carregar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer id="rodape"></footer>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
