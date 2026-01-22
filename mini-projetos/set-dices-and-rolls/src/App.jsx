@@ -15,20 +15,27 @@ function App() {
       </header>
       <main>
         <section>
-          <ul className='flex justify-center gap-8 mt-8 text-lg font-medium'>
+          <ul className='flex flex-col gap-6 mt-8 text-lg font-medium'>
             <li>
               <Card 
                 title='Criar Personagem' 
-                description='Crie seus personagens aqui.' 
+                description='Crie seus personagens.' 
               />
             </li>
 
             <li>
-              Rolagens
+              <Card
+                title='Rolagens'
+                description='Confira suas rolagens.'
+              />
             </li>
 
             <li>
-              Gerenciar inventário
+              <Card 
+                title='Itens'
+                description='Gerencie seus itens.'
+                route='/itens'
+              />
             </li>
           </ul>
         </section>
