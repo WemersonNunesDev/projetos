@@ -1,4 +1,5 @@
 import './App.css'
+import { Card } from './components/Card.jsx'
 
 function App() {
 
@@ -16,7 +17,10 @@ function App() {
         <section>
           <ul className='flex justify-center gap-8 mt-8 text-lg font-medium'>
             <li>
-              Criar seu personagem
+              <Card 
+                title='Criar Personagem' 
+                description='Crie seus personagens aqui.' 
+              />
             </li>
 
             <li>
