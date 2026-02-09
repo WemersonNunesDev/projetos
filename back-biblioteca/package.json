@@ -9,5 +9,11 @@
   "devDependencies": {
     "h3": "^1.15.4",
     "nitropack": "^2.12.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.3.0",
+    "bcrypt": "^6.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "prisma": "^7.3.0"
   }
 }
