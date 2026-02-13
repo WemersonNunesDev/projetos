@@ -7,7 +7,7 @@ datasource db {
 }
 
 model Client {
-  id        int       @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   nome      String
   email     String    @unique
   senhaHash String
@@ -30,19 +30,19 @@ model Livro {
 }
 
 model Reservas {
-  id            Int @id @default(autoincrement())
+  id            Int            @id @default(autoincrement())
   clienteId     Int
-  livrosId      Int
-  status        reservaStatus @default(ATIVA)
-  dataReserva   DateTime @default(now())
+  livroId       Int
+  status        ReservaStatus  @default(ATIVA)
+  dataReserva   DateTime       @default(now())
   dataDevolucao DateTime?
 
-  cliente       Cliente  @relation(fields: [clientId], references: [id])
-  livro         Livro    @relation(fields: [livroId], references: [id])
+  cliente Client @relation(fields: [clienteId], references: [id])
+  livro   Livro  @relation(fields: [livroId], references: [id])
 }
 
 enum ReservaStatus {
   ATIVA
-  DEVOLVIDA
+  FINALIZADA
   CANCELADA
 }

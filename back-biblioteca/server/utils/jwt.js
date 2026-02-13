@@ -1,15 +1,19 @@
 import jwt from 'jsonwebtoken';
 import { unauthorized } from './errors';
 
-const JWT_SECRET = process.env.JWT_SECRET
+const config = useRuntimeConfig();
 
 export function signToken(payload) {
-    return jwt.sign(payload, JWT_SECRET, { expiresIn: '1d' })
+    return jwt.sign(
+        payload, 
+        config.JWT_SECRET, 
+        { expiresIn: config.JWT_EXPIRES_IN }
+    )
 }
 
 export function verifyToken(token) {
     try {
-        return jwt.verify(token, JWT_SECRET)
+        return jwt.verify(token, config.JWT_SECRET)
     } catch {
         throw unauthorized('Token inválido')
     }
